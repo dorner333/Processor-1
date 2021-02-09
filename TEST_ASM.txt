@@ -1,0 +1,6 @@
+push 83
+push
+mul
+push
+add
+out
