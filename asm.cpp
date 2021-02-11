@@ -4,7 +4,7 @@
 
 const int OPEN_ERR = 1;
 
-enum {end = '0', push, add, sub, DIV, mul, fsqrt, in, hlt, out} CMDS;
+enum {end = '0', PUSH, ADD, SUB, DIV, MUL, FSQRT, IN, /* hlt,*/ PRINT, OUT} CMDS;
 
 int open(char** symbols);
 void read(char* symbols, int SIZE);
@@ -62,31 +62,35 @@ void read(char* symbols, int SIZE){
 	for(int i = 0; i < SIZE; i++){		
 		if(symbols[i] == '\0'){
 			if(!strcmp(symbols + pnt, "push")){
-				code[j++] = push;
+				code[j++] = PUSH;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "add")){
-				code[j++] = add;
+				code[j++] = ADD;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "sub")){
-				code[j++] = sub;
+				code[j++] = SUB;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "div")){
 				code[j++] = DIV;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "mul")){
-				code[j++] = mul;
+				code[j++] = MUL;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "fsqrt")){
-				code[j++] = fsqrt;
+				code[j++] = FSQRT;
 				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "out")){
-				code[j++] = out;
+				code[j++] = OUT;
+				code[j++] = '\n';
+			} else if(!strcmp(symbols + pnt, "print")){
+				code[j++] = PRINT;
+				code[j++] = '\n';
+			} else if(!strcmp(symbols + pnt, "in")){
+				code[j++] = IN;
 				code[j++] = '\n';
 			} else {
-				//printf("%s\n", symbols + pnt);
-				//sscanf(symbols + pnt, "%d", &x);
-				sprintf(code + j, "%s", symbols + pnt);
-				j++;
+				while(symbols[pnt] != '\0')
+					code[j++] = symbols[pnt++];
 				code[j++] = '\n';
 			}
 			pnt = i + 1;
@@ -94,10 +98,6 @@ void read(char* symbols, int SIZE){
 	}
 
 	fwrite(code, sizeof(char), j, file2);
-
-	for(int i = 0; i < SIZE; i++){
-		printf("%c", code[i]);
-	}
 
 	fclose(file2);
 	free(symbols);
