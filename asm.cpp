@@ -4,30 +4,31 @@
 
 const int OPEN_ERR = 1;
 
-enum {end = '0', PUSH, ADD, SUB, DIV, MUL, FSQRT, IN, /* hlt,*/ PRINT, OUT} CMDS;
+enum {END = '0', PUSH, PUSHR, POP, POPR, ADD, SUB, DIV, MUL, FSQRT, IN, PRINT, OUT} CMDS;
+enum {RAX = '0', RBX, RCX, RDX} REGS;
 
-int open(char** symbols);
-void read(char* symbols, int SIZE);
+int read(char** symbols, char** f_asm);
+void write(char* symbols, int SIZE);
 
-int main(){
+int main(int argc, char* argv[]){
 
 	char* symbols = NULL;
 	
-	int SIZE = open(&symbols);
+	int SIZE = read(&symbols, argv + 1);
 	
 	if(SIZE == OPEN_ERR){
 		printf("OPEN_ERR\n");
 		return OPEN_ERR;
 	}
 
-	read(symbols, SIZE);
+	write(symbols, SIZE);
 
 	return 0;
 }
 
-int open(char** symbols){
+int read(char** symbols, char** f_asm){
 
-	FILE* file1 = fopen("TEST_ASM.txt", "r+");
+	FILE* file1 = fopen(*f_asm, "r+");
 
 	if(file1 == NULL){
 		return OPEN_ERR;
@@ -51,52 +52,58 @@ int open(char** symbols){
 	return SIZE;
 }
 
-void read(char* symbols, int SIZE){
+void write(char* symbols, int SIZE){
 
-	FILE* file2 = fopen("TEST.txt", "w");
+	FILE* file2 = fopen("bin.out", "w");
 
 	char* code = (char*)calloc(SIZE, sizeof(char));
 
 	int j = 0, pnt = 0;
 
-	for(int i = 0; i < SIZE; i++){		
+	for(int i = 0; i < SIZE; i++){
 		if(symbols[i] == '\0'){
 			if(!strcmp(symbols + pnt, "push")){
 				code[j++] = PUSH;
-				code[j++] = '\n';
+			} else if(!strcmp(symbols + pnt, "pushr")){
+				code[j++] = PUSHR;
+			} else if(!strcmp(symbols + pnt, "pop")){
+				code[j++] = POP;
+			} else if(!strcmp(symbols + pnt, "popr")){
+				code[j++] = POPR;
 			} else if(!strcmp(symbols + pnt, "add")){
 				code[j++] = ADD;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "sub")){
 				code[j++] = SUB;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "div")){
 				code[j++] = DIV;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "mul")){
 				code[j++] = MUL;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "fsqrt")){
 				code[j++] = FSQRT;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "out")){
 				code[j++] = OUT;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "print")){
 				code[j++] = PRINT;
-				code[j++] = '\n';
 			} else if(!strcmp(symbols + pnt, "in")){
 				code[j++] = IN;
-				code[j++] = '\n';
 			} else {
-				while(symbols[pnt] != '\0')
-					code[j++] = symbols[pnt++];
-				code[j++] = '\n';
+				if(!strcmp(symbols + pnt, "rax")){
+					code[j++] = RAX;
+				} else if(!strcmp(symbols + pnt, "rbx")){
+					code[j++] = RBX;
+				} else if(!strcmp(symbols + pnt, "rcx")){
+					code[j++] = RCX;
+ 				} else if(!strcmp(symbols + pnt, "rdx")){
+					code[j++] = RDX;
+				} else {	
+					while(symbols[pnt] != '\0')
+						code[j++] = symbols[pnt++];
+				}
 			}
+			code[j++] = '\n';
 			pnt = i + 1;
 		}
 	}
-
 	fwrite(code, sizeof(char), j, file2);
 
 	fclose(file2);

@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "stack.cpp"
-		//	 0	   1	2	 3 	  4    5     6                   7     8
-enum {end = 0, PUSH, ADD, SUB, DIV, MUL, FSQRT, IN, /* hlt,*/ PRINT, OUT} CMDS;
+
+enum {END = 0, PUSH, PUSHR, POP, POPR, ADD, SUB, DIV, MUL, FSQRT, IN, PRINT, OUT} CMDS;
 
 const int OPEN_ERR = 1;
 const int CMD_ERROR = 2;
 
-int file(int** cmd);
+int file(int** cmd, char** file);
 int proc(int* cmd, int SIZE);
 
-int main(){
+int main(int argc, char* argv[]){
 
-	int* cmd;
+	int* cmd = NULL;
 
-	int SIZE = file(&cmd);
+	int SIZE = file(&cmd, argv + 1);
 
 	if(SIZE == OPEN_ERR){
 
@@ -27,9 +27,9 @@ int main(){
 	return 0;
 }
 
-int file(int** cmd){
+int file(int** cmd, char** file){
 
-	FILE* comands = fopen("TEST.txt", "r");
+	FILE* comands = fopen(*file, "r");
 
 	if(comands == NULL){
 		fclose(comands);
@@ -64,61 +64,78 @@ int file(int** cmd){
 int proc(int* cmd, int SIZE){
 	
 	Stack stack;
-
 	constructor(&stack, SIZE);
+
+	int registers[4] = { };
 
 	int mode = -1;
 
-	if(cmd[0] != PUSH){
+	if(cmd[0] != PUSH && cmd[0] != PUSHR){
 		printf("Bad input data\n");
 		return CMD_ERROR;
 	} else {
-		mode = 0;   							//mode == 1 ==> waiting for a digit, else waiting for a command
+		mode = 0;
 	}
 
-	int tmp1 = 0, tmp2 = 0;
+	int tmp = 0;
 
 	for(int i = 1; i < stack.capacity && cmd[i] != OUT; i++){
 		
-		if(mode == 1){
-
+		switch(mode){
+		case(0):	
+			
 			switch(cmd[i]){
-				case(PUSH):
-					mode = 0;
-					break;
-				case(ADD):				
-					tmp1 = pop(&stack), tmp2 = pop(&stack);
-					push(&stack, tmp2 + tmp1);
-					break;
-				case(SUB):			
-					tmp1 = pop(&stack), tmp2 = pop(&stack);
-					push(&stack, tmp2 - tmp1);
-					break;
-				case(DIV):
-					tmp1 = pop(&stack), tmp2 = pop(&stack);
-					push(&stack, (tmp2)/(tmp1));
-					break;
-				case(MUL):
-					tmp1 = pop(&stack), tmp2 = pop(&stack);
-					push(&stack, (tmp2) * (tmp1));
-					break;
-				case(IN):
-					scanf("%d", &tmp1);
-					push(&stack, tmp1);
-					break;
-				case(PRINT):
-					char top = pop(&stack);
-					push(&stack, top);
-					printf("TOP = %d\n", top);
-					break;
-				}
+			case(PUSH):
+				mode = 1;
+				break;
+			case(PUSHR):
+				mode = 2;
+				break;
+			case(POP):
+				tmp = pop(&stack);
+				break;
+			case(POPR):
+				mode = 3;
+			case(ADD):				
+				push(&stack, pop(&stack) + pop(&stack));
+				break;
+			case(SUB):			
+				push(&stack, pop(&stack) - pop(&stack));
+				break;
+			case(DIV):
+				push(&stack, pop(&stack) / pop(&stack));
+				break;
+			case(MUL):
+				push(&stack, pop(&stack) * pop(&stack));
+				break;
+			case(IN):
+				scanf("%d", &tmp);
+				push(&stack, tmp);
+				break;
+			case(PRINT):
+				tmp = pop(&stack);
+				push(&stack, tmp);
+				printf("TOP = %d\n", tmp);
+				break;
+			}
 
-		} else {
+			break;
 
+		case(1):
 			push(&stack, cmd[i]);		
-			mode = 1;
+			mode = 0;
+			break;
+		case(2):
+			push(&stack, registers[cmd[i]]);		
+			mode = 0;
+			break;
+		case(3):
+			registers[cmd[i]] = pop(&stack);
+			break;
 		}
 	}
+
+	stack_dump(&stack);
 
 	destructor(&stack);
 	free(cmd);

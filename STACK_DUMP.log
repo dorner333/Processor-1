@@ -1,0 +1,530 @@
+
+Tue Feb 23 15:48:00 2021
+
+Stack was created.
+
+		STACK DUMP
+Status: 51116
+Size: -1
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = 9185436023
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -1
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2859852717705
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: 0
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = 26365305207
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: 0
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = 26365305207
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -1
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = 26365305207
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -1
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2859852717705
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -2
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2859852717705
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -2
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -3
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -3
+Capacity: 13
+Hash summ: 0
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -4
+Capacity: 13
+Hash summ: 1215
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -4
+Capacity: 13
+Hash summ: 1215
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -5
+Capacity: 13
+Hash summ: 521887
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -5
+Capacity: 13
+Hash summ: 521887
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -6
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -6
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -7
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -7
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -8
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -8
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
+		STACK DUMP
+Status: 51116
+Size: -8
+Capacity: 13
+Hash summ: 11481996607
+Poison: -666
+Canary: 9185436023
+Stack Pointer: 0x7ffe28de5b20
+Stack elements:
+
+	stack.canary = -2856153252506
+	stack.elem[0] = -666
+	stack.elem[1] = -666
+	stack.elem[2] = -666
+	stack.elem[3] = -666
+	stack.elem[4] = -666
+	stack.elem[5] = -666
+	stack.elem[6] = -666
+	stack.elem[7] = -666
+	stack.elem[8] = -666
+	stack.elem[9] = -666
+	stack.elem[10] = -666
+	stack.elem[11] = -666
+	stack.elem[12] = -666
+	stack.canary = 9185436023
