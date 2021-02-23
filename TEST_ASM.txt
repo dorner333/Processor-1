@@ -1,9 +1,0 @@
-push 6
-push 3
-mul
-in
-sub
-push 42
-div
-print
-out
